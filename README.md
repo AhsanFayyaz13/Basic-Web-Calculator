@@ -2,8 +2,8 @@
 
 A simple, responsive calculator built with HTML, CSS, and JavaScript.
 
-![Calculator Screenshot](<img width="583" height="564" alt="Screenshot 2025-07-13 002546" src="https://github.com/user-attachments/assets/3eb92b22-5aa9-4b5a-adb7-76de38963b18" />
-) 
+![Calculator Screenshot](./screenshot.png)
+
 
 ## Features
 
