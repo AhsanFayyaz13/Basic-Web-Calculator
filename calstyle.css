@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #121212;
+    color: #ffffff;
+}
+
+.calculator {
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    background: #1e1e1e;
+    width: 340px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.calculator:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.display input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 25px 15px;
+    margin: 10px 0 20px 0;
+    background: #252525;
+    color: #ffffff;
+    font-size: 2.5rem;
+    text-align: right;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    font-weight: 300;
+    caret-color: transparent;
+}
+
+.display input::placeholder {
+    color: #555;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+}
+
+button {
+    width: 70px;
+    height: 70px;
+    background: #2a2a2a;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+button:hover {
+    background: #333;
+    transform: translateY(-3px);
+}
+
+button:hover::before {
+    opacity: 1;
+}
+
+button:active {
+    transform: translateY(1px);
+    background: #3a3a3a;
+}
+
+.opr {
+    background: #3d5afe !important;
+    color: #ffffff !important;
+}
+
+.opr:hover {
+    background: #536dfe !important;
+}
+
+#eqBtn {
+    background: #00c853 !important;
+    color: #ffffff !important;
+}
+
+#eqBtn:hover {
+    background: #00e676 !important;
+}
+
+#plusminus {
+    background: #ff9100 !important;
+    color: #ffffff !important;
+}
+
+#plusminus:hover {
+    background: #ffab40 !important;
+}
+
+/* Animation for button presses */
+@keyframes buttonPress {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+button:active {
+    animation: buttonPress 0.2s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .calculator {
+        width: 300px;
+        padding: 15px;
+    }
+
+    .display input {
+        font-size: 2rem;
+        padding: 20px 10px;
+    }
+
+    button {
+        width: 60px;
+        height: 60px;
+        font-size: 1.3rem;
+    }
+}
