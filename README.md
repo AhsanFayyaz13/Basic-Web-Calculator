@@ -2,7 +2,7 @@
 
 A simple, responsive calculator built with HTML, CSS, and JavaScript.
 
- ![Calculator Screenshot](MyCal/Screenshot.png)
+ ![Calculator Screenshot](Screenshot.png)
 
 
 ## Features
